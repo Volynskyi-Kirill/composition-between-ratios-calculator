@@ -11,6 +11,13 @@ function composition(R1, R2) {
     });
   });
 
+  result.sort((x, y) => {
+    if (x[0] === y[0]) {
+      return x[1] > y[1] ? 1 : -1;
+    }
+    return x[0] > y[0] ? 1 : -1;
+  });
+
   return result;
 }
 
